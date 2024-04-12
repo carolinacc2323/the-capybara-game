@@ -13,7 +13,10 @@
 .audio-player {
   position: relative;
   top: 200px;
-  margin-left: 1200px;
+  margin-left: 1500px;
+}
+.audio-player-image {
+  cursor: pointer; 
 }
 :root {
   --bs-blue: #0d6efd;
