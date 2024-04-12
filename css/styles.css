@@ -18,6 +18,21 @@
 .audio-player-image {
   cursor: pointer; 
 }
+@keyframes rebote {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#audio-control {
+  border-radius: 50%;
+  animation: rebote 1s infinite;
+}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
