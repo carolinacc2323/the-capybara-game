@@ -11,12 +11,35 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 .audio-player {
-  position: relative;
+  /* position: relative; */
   top: 200px;
   margin-left: 1500px;
 }
 .audio-player-image {
   cursor: pointer; 
+}
+.cmn-divfloat {
+  position: fixed !important;
+  bottom: 45px;
+  right: 15px;
+  display: none;
+}
+.cmn-btncircle {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 6px 0px;
+  border-radius: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+.row {
+  display: flex; /* Activa el modo flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  
+}
+.card {
+  max-height: 100%; /* Permite que la altura se ajuste al contenido */
 }
 @keyframes rebote {
   0% {
