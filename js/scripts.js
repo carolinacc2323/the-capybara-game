@@ -64,7 +64,7 @@ if (audioPlayer.paused) {
     audioPlayer.pause();
 }
 });
-// Boton
+// Boton arriba
 (function() {
     //a partir de que punto del scroll vertical de la ventana mostrará el botón
     const ishow = 115
