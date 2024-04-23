@@ -10,33 +10,78 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- /* cards flip */
- .card-flip > div {
-  backface-visibility: hidden;
-  transition: transform 300ms;
-  transition-timing-function: linear;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  display: flex;
+
+/* Apiladas real */
+
+.container{
+  transform-style: preserve-3d;
 }
 
-.card-front {
-  transform: rotateY(0deg);
+.container .box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
-.card-back {
-  transform: rotateY(180deg);
+.container .box .body{
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
 }
 
-.card-flip:hover .card-front {
-  transform: rotateY(-180deg);
+
+
+.container .box .body .imgContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
 }
-  
-.card-flip:hover .card-back {
-  transform: rotateY(0deg);
+
+.container .box .body .imgContainer img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .body .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container .box:hover .body{
+  transform: rotateY(180deg);
+}
+
+.container .box .body .content div{
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(45deg, #FE0061,#FFEB3B);
+  transform: translateZ(100px);
+}
+
+.container .box .body .content div h3{
+  letter-spacing: 1px;
 }
 /* botón sonido */
 #audio-control {
@@ -69,6 +114,7 @@
 .card {
   max-height: 100%; /* Permite que la altura se ajuste al contenido */
 }
+/* boton audio */
 @keyframes rebote {
   0% {
     transform: translateY(0);
@@ -83,6 +129,38 @@
 #audio-control {
   border-radius: 50%;
   animation: rebote 1s infinite;
+}
+/* boton instrucciones */
+#instrucciones{
+  margin-top: 0.5em;
+}
+/* flip card */
+.card-flip > div {
+  backface-visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: linear;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+}
+
+.card-front {
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+}
+
+.card-flip:hover .card-front {
+  transform: rotateY(-180deg);
+}
+  
+.card-flip:hover .card-back {
+  transform: rotateY(0deg);
 }
 :root {
   --bs-blue: #0d6efd;
@@ -11016,6 +11094,10 @@ p {
     margin-right: 0;
   }
 }
+#bienvenido{
+  font-size: 5.5em;
+  text-shadow: 1px 1px 3px black;
+}
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
@@ -11035,6 +11117,7 @@ header.masthead .masthead-subheading {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
+  text-shadow: 1px 1px 3px black;
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 3.25rem;
