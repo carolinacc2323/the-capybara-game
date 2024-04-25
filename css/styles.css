@@ -12,7 +12,6 @@
  */
 
 /* Apiladas real */
-
 .container{
   transform-style: preserve-3d;
 }
@@ -162,6 +161,97 @@
 .card-flip:hover .card-back {
   transform: rotateY(0deg);
 }
+/* boton card jugar */
+#jugarbtn{
+  margin-top: 0.5em;
+}
+/* box */
+/* .body{
+  outline: 6px dashed #F8D7DA;
+  box-shadow: 0 0 0 6px #FFCBD5;
+  animation: 1s animateBorder infinite;
+}
+@keyframes animateBorder {
+  to {
+    outline-color: #FFC107;
+    box-shadow: 0 0 0 6px #FFDA6A;
+  }
+} */
+.box {
+  box-shadow: 0px 0px 0px 5px #FFC107;
+  transition: box-shadow 0.6s linear;
+  margin: 0.5em; /* Increased margin since the box-shado expands outside the element, like outline */
+}
+
+.box:hover { box-shadow: 0px 0px 0px 10px #FFC107; }
+
+/* btnJugar */
+.btnJugar{
+  margin-top: 0.5em;
+}
+
+/* efecto puntas */
+#mapi{
+  --g: 4px;     /* the gap */
+  --b: 10px;    /* border thickness*/
+  --c: #93D109; /* the color */
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  /* filter: grayscale(50%); */
+  transition: .3s;
+}
+#mapi:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+#movil{
+  --g: 4px;     /* the gap */
+  --b: 8px;    /* border thickness*/
+  --c: #EBD1FC; /* the color */
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  /* filter: grayscale(50%); */
+  transition: .3s;
+}
+#movil:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+#patos{
+  --g: 5px;     /* the gap */
+  --b: 8px;    /* border thickness*/
+  --c: #FFEB87; /* the color */
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  /* filter: grayscale(50%); */
+  transition: .3s;
+}
+#patos:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

@@ -65,17 +65,18 @@
                     <h3 class="section-subheading text-muted">Cada aventura con Gori el Capybara se compone de un mapa del lugar a visitar, un set de pegatinas y una App web muy sencilla de usar donde se plantean retos.</h3>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-4">
-                        <img src="./assets/img/juego/mapi.jpg" class="img-fluid" alt="Imagen de mapas">
+                    <div class="col-md-4" id="mapi">
+                        <img src="./assets/img/juego/mapi.jpg" class="img-fluid" alt="Imagen de mapas" height="300px" width="300px">
                         <h4 class="my-3">Mapas</h4>
-                        <p class="text-muted">En un mapa se marcan los puntos importantes a visitar y se facilita un código de acceso al juego.</p>
+                        <p class="text-muted">En un mapa se marcan los puntos importantes a visitar y se facilita un código de acceso al juego. Una vez en la localización podrás hacer uso del mapa.
+                        </p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="movil">
                         <img src="./assets/img/juego/movil.jpg" class="img-fluid" alt="Imagen de móvil" height="300px" width="300px">
                         <h4 class="my-3">App Web</h4>
                         <p class="text-muted">Cada usuario accede directamente desde marcotopo.com e introduce el código que aparece en el mapa.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" id="patos">
                         <img src="./assets/img/juego/patos.png" class="img-fluid" alt="Imagen del juego" height="300px" width="300px">
                         <h4 class="my-3">Juego</h4>
                         <p class="text-muted">Una vez introducido el código empieza el juego, nuestros personajes acompañan y guían por el recorrido a los participantes.</p>
@@ -262,7 +263,16 @@
                     <p class="card-text">
                         ¡Descúbrelo en familia jugando en The Capybara Game Navidad 2023!
                         Puedes comenzar tu aventura clicando en el botón de abajo.</p>
-                        <a href="#" class="btn btn-outline-secondary">Jugar</a>
+                        <div id="instrucciones" class="text-center">
+                            <button type="button" class="btn btn-primary botoninstruccion" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Ver instrucciones
+                            </button>
+                        </div>
+                        <div class="btnJugar">
+                            <a href="#aventuras">
+                            <button  type="button" class="btn btn-outline-warning">Jugar</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -281,8 +291,18 @@
                     <p class="card-text">
                         ¡Descúbrelo en familia jugando en The Capybara Game 2023!
                         Puedes comenzar tu aventura clicando en el botón de abajo.</p>
-                        <a href="#" class="btn btn-outline-secondary">Jugar</a>
+                        <div id="instrucciones" class="text-center">
+                            <button type="button" class="btn btn-primary botoninstruccion" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Ver instrucciones
+                            </button>
+                        </div>
+                        <div class="btnJugar">
+                            <a href="#aventuras">
+                            <button  type="button" class="btn btn-outline-warning">Jugar</button>
+                            </a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             <!-- card flip3 -->
@@ -300,7 +320,16 @@
                     <p class="card-text">
                         ¡Descúbrelo en familia jugando en The Capybara Game 2023!
                         Puedes comenzar tu aventura clicando en el botón de abajo.</p>
-                        <a href="#" class="btn btn-outline-secondary">Más</a>
+                        <div id="instrucciones" class="text-center">
+                            <button type="button" class="btn btn-primary botoninstruccion" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Ver instrucciones
+                            </button>
+                        </div>
+                        <div class="btnJugar">
+                            <a href="#aventuras">
+                            <button  type="button" class="btn btn-outline-warning">Jugar</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -308,11 +337,11 @@
     </div>
     <!-- Modal -->
     <!-- Button trigger modal -->
-    <div id="instrucciones" class="text-center">
+    <!-- <div id="instrucciones" class="text-center">
         <button type="button" class="btn btn-primary botoninstruccion" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Ver instrucciones
         </button>
-    </div>
+    </div> -->
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
