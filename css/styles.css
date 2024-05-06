@@ -194,7 +194,7 @@
 #mapi{
   --g: 4px;     /* the gap */
   --b: 10px;    /* border thickness*/
-  --c: #93D109; /* the color */
+  --c: #7ADFFD; /* the color */
   padding: calc(var(--g) + var(--b));
   --_c: #0000 0 25%, var(--c) 0 50%;
   --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
